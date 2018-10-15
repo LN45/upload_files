@@ -44,24 +44,7 @@ if (!empty($_FILES['files']['name'][0])){
                         $uploaded[$position] = $file_destination;
                         echo 'le ou les fichiers ont bien été uploadés !';
                         header('Location: filesUpload.php');
-                        /*$file_destination = 'upload/';
-                        $files1 = scandir($file_destination);
-                        var_dump($files1);
-                            echo'<div>
-                                    <div class="img-thumbnail">
-                                        <img src=upload/'.$file_name_new.' height="352" width="470">
-                                        <div>
-                                            <h3>'.$file_name_new.'</h3>
-                                            <form action="" method="post" role="form">
-                                                <input type="hidden"  name="image" value='.$file_name_new.' >
-                                                <input type="submit" class="btn-danger" name="delete" value="delete">
-                                            </form>
-                                        </div>
-                                    </div>
-                                  </div>';
-                        if(isset($_POST['delete'])){
-                            unlink("upload/".$_POST['image']);
-                        }*/
+
                     }else{
                         $failed[$position] = "[{$file_name}] failed to upload.";
                         echo 'le ou les fichiers n\'ont pas été uploadés.';
@@ -86,4 +69,4 @@ if (!empty($_FILES['files']['name'][0])){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
-</html>
+</htm
