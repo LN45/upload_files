@@ -10,12 +10,12 @@
 
 <div>
     <?php
-    $it = new FilesystemIterator('upload/');
+    $it = new FilesystemIterator('upload/'); // pour lister les fichiers dans le dossier upload
 
-    foreach ($it as $fileinfo) :
-        $file=$fileinfo->getFilename();?>
+    //$it ressort le nom de l'image
+    foreach ($it as $fileinfo) :;?>
             <div class="img-thumbnail">
-                <img src="upload/<?=$file?>" height="352" width="470">
+                <img src="upload/<?=$it?>" height="352" width="470">
                  <div>
                      <h3><?= $it ?></h3>
                      <form action="" method="post" role="form">
@@ -29,8 +29,8 @@
 
 <?php
 $file_destination = 'upload/';
+
 if(isset($_POST['deleteImage'])){
     unlink($file_destination.$_POST['deleteImage']);
-    var_dump($_POST);
     header('Location: filesUpload.php');
 }
